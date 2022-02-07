@@ -118,7 +118,7 @@ metadata:
   name: ingress-default-backend
   namespace: haproxy-controller
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       run: ingress-default-backend
