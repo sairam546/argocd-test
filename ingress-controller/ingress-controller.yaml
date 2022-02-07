@@ -158,7 +158,7 @@ metadata:
   name: haproxy-ingress
   namespace: haproxy-controller
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       run: haproxy-ingress
@@ -172,7 +172,7 @@ spec:
        app: ingress
       containers:
       - name: haproxy-ingress
-        image: haproxytech/kubernetes-ingress:1.7.3
+        image: haproxytech/kubernetes-ingress:1.6.8
         args:
           - --configmap=haproxy-controller/haproxy
           - --default-backend-service=haproxy-controller/ingress-default-backend
